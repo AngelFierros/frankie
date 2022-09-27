@@ -46,6 +46,7 @@ public class Main {
         paso.setOrden(6);
         paso.setDescripcion("");
         
+        //pasos
         
         receta.setDificultad(Dificultad.LEGENDARIO);
        
