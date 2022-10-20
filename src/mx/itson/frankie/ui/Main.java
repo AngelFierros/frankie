@@ -78,7 +78,7 @@ public class Main {
         Usuario usuario = new Usuario();
         usuario.setNombre("Jorge Espejel");
         usuario.setEmail("eljorge@correo.com");
-        usuario.setPassword("rogramacion123");
+        usuario.setPassword("programacion123");
         
         receta.setUsuario(usuario);
         

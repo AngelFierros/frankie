@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package mx.itson.frankie.entidades;
-
+import com.google.gson.Gson;
 import java.util.List;
 import mx.itson.frankie.enumerador.Dificultad;
 
@@ -35,7 +35,16 @@ public class Receta {
     private List<Paso> pasos;
     private Dificultad dificultad;
     private Usuario usuario;
-
+    public Receta deserializar(String json){
+        Receta receta = new Receta();
+        try{
+             receta = new Gson().fromJson(json, Receta.class);
+        }catch(Exception ex){
+            System.err.println("Ocurrio un error" + ex.getMessage());
+        }
+         return receta;   
+     }
+    
     /**
      * @return the nombre
      */
